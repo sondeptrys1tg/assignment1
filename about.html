@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    body.dark-mode .nav {
+      background-color: #000000;
+    }
+
+    body.dark-mode .nav-link {
+      color: #ffffff !important;
+    }
+
+    body.dark-mode .nav-link.text-primary {
+      color: #82b1ff !important;
+    }
+
+    body.dark-mode .about-header,
+    body.dark-mode .more-info {
+      background-color: #1f1f1f;
+      color: #ffffff;
+    }
+
+    body.dark-mode,
+    body.dark-mode .about-header p,
+    body.dark-mode .more-info p,
+    body.dark-mode .more-info li,
+    body.dark-mode h2 {
+      color: #ffffff !important;
+    }
+
+    body.dark-mode a {
+      color: #82b1ff;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      background-color: #ffffff;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .about-header {
+      background-color: white;
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 50px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-header h1 {
+      margin-bottom: 20px;
+      font-size: 3rem;
+      color: rgb(22, 157, 230);
+    }
+
+    .about-header p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .more-info {
+      background-color: white;
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 50px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .more-info p, .more-info li {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .footer {
+      text-align: center;
+      justify-content: center;
+      color: #666;
+      transition: color 0.3s;
+    }
+
+    body.dark-mode .footer {
+      color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav justify-content-center py-3 shadow-sm">
+    <a href="index.html" class="nav-link text-secondary fs-5 mx-3">Home</a>
+    <a href="blog.html" class="nav-link text-secondary fs-5 mx-3">Blog</a>
+    <a href="about.html" class="nav-link text-primary fs-5 fw-semibold mx-3">About Me</a>
+    <a href="resume.html" class="nav-link text-secondary fs-5 mx-3">Resume</a>
+    <a href="project.html" class="nav-link text-secondary fs-5 mx-3">Project</a>
+    <a href="contact.html" class="nav-link text-secondary fs-5 mx-3">Contact</a>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" class="btn btn-light border-0 ms-3">
+      <i id="theme-icon" class="bi bi-moon-fill fs-4"></i>
+    </button>
+  </nav>
+
+  <header class="about-header">
+    <img src="public/profile.jpg" alt="My Photo" class="profile-img">
+    <div>
+      <h1>Dang Ngoc Thai Son</h1>
+      <p>Computer Science student of HCMIU</p>
+      <p>Interested in software development, algorithms, and AI</p>
+    </div>
+  </header>
+
+  <section class="more-info">
+    <p class="mb-3">Hi! I'm Son, a web developer and I...</p>
+    <ul class="gap-3 mb-3">
+      <li>do frontend web development,</li>
+      <li>create website sideframes,</li>
+      <li>interested in backend development and currently learning.</li>
+    </ul>
+
+    <p>Interested in working with me? Contact me via:
+      <a href="mailto:dnts0203@gmail.com">dnts0203@gmail.com</a>
+    </p>
+
+    <h2 class="mt-5 mb-3">Education</h2>
+    <ul>
+      <li>2023 - Present: Ho Chi Minh City International University, majoring in Computer Science.</li>
+    </ul>
+
+    <h2 class="mt-5 mb-3">Other Interests</h2>
+    <ul>
+      <li>Game development</li>
+      <li>Music</li>
+      <li>Gacha games</li>
+      <li>Old ThinkPads</li>
+      <li>Steampunk & Fantasy themes</li>
+    </ul>
+
+    <h2 class="mt-5 mb-3">Language Proficiency</h2>
+    <p>I have native proficiency in
+      <span class="text-primary">Vietnamese</span> and
+      <span class="text-primary">English</span>,
+      and I'm learning <span class="text-primary">Japanese</span>.
+    </p>
+  </section>
+
+  <footer>
+    <div class="footer mt-4 mb-4">
+      <p>&copy; 2025 Son. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+
+    // Check local storage on load
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+    }
+
+    // Toggle dark mode
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const dark = document.body.classList.contains('dark-mode');
+      icon.classList.replace(dark ? 'bi-moon-fill' : 'bi-sun-fill', dark ? 'bi-sun-fill' : 'bi-moon-fill');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

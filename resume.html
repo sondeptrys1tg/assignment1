@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Dang Ngoc Thai Son</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 0;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* ---------- Dark Mode ---------- */
+    body.dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    body.dark-mode .resume-container {
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode .header {
+      border-bottom: 2px solid #444;
+    }
+
+    body.dark-mode .left-column {
+      border-right: 1px solid #444;
+    }
+
+    body.dark-mode a {
+      color: #82b1ff;
+    }
+
+    body.dark-mode .nav {
+      background-color: #000;
+    }
+
+    body.dark-mode .nav a {
+      color: #fff !important;
+    }
+
+    body.dark-mode .section-title {
+      color: #ddd;
+    }
+
+    body.dark-mode .contact-info p,
+    body.dark-mode .summary p,
+    body.dark-mode .experience p {
+      color: #ccc;
+    }
+
+    /* ---------- Base Styles ---------- */
+    .resume-container {
+      background-color: #fff;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      transition: border-color 0.3s;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .header h3 {
+      font-weight: 400;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1rem;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #007bff;
+    }
+
+    .left-column {
+      border-right: 1px solid #ddd;
+      padding-right: 20px;
+      transition: border-color 0.3s;
+    }
+
+    .section-title {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    .contact-info p, .summary p, .experience p {
+      margin-bottom: 5px;
+      color: #444;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .work-item {
+      margin-bottom: 20px;
+    }
+
+    .work-item h5 {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    .work-item small {
+      color: #888;
+    }
+
+    .nav {
+      margin-bottom: 30px;
+      text-align: center;
+      background-color: #fff;
+      padding: 15px 0;
+      border-radius: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #007bff;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav d-flex justify-content-center align-items-center">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About Me</a>
+    <a href="resume.html"><strong>Resume</strong></a>
+    <a href="project.html">Project</a>
+    <a href="contact.html">Contact</a>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="btn btn-light border-0 ms-3">
+      <i id="theme-icon" class="bi bi-moon-fill fs-5"></i>
+    </button>
+  </nav>
+
+  <!-- Resume Box -->
+  <div class="resume-container">
+    <div class="header">
+      <div>
+        <h3>Computer Science Student</h3>
+        <h1>Dang Ngoc Thai Son</h1>
+      </div>
+      <img src="public/profile.jpg" alt="Profile" class="profile-img">
+    </div>
+
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-4 left-column">
+        <div class="contact-info">
+          <div class="section-title">Contact</div>
+          <p>📍 Ho Chi Minh City, Vietnam</p>
+          <p>📞 +84 123 456 789</p>
+          <p>✉️ <a href="mailto:son@example.com">son@example.com</a></p>
+          <p>🔗 <a href="https://linkedin.com/in/son">linkedin.com/in/son</a></p>
+        </div>
+
+        <div class="skills">
+          <div class="section-title">Skills</div>
+          <ul>
+            <li>Web Development (HTML, CSS, JS)</li>
+            <li>Java Programming</li>
+            <li>Algorithms & Data Structures</li>
+            <li>Problem Solving</li>
+          </ul>
+        </div>
+
+        <div class="languages">
+          <div class="section-title">Languages</div>
+          <ul>
+            <li>Vietnamese <span class="text-primary">Native</span></li>
+            <li>English <span class="text-primary">Fluent</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-8">
+        <div class="summary">
+          <div class="section-title">Summary</div>
+          <p>A passionate computer science student with a focus on software development, algorithms, and artificial intelligence. Interested in building scalable systems and improving user experience through technology.</p>
+        </div>
+
+        <div class="experience">
+          <div class="section-title">Work Experience</div>
+
+          <div class="work-item">
+            <h5>Frontend Web Developer (Intern)</h5>
+            <small>TechX Company | June 2024 - Aug 2024</small>
+            <p>Built and maintained responsive web interfaces using HTML, CSS, and JavaScript frameworks.</p>
+          </div>
+
+          <div class="work-item">
+            <h5>Student Research Assistant</h5>
+            <small>HCMIU | Jan 2024 - May 2024</small>
+            <p>Supported a research project in data mining and clustering algorithms using Python.</p>
+          </div>
+
+          <div class="work-item">
+            <h5>Personal Projects</h5>
+            <p>Developed multiple academic and hobby projects in web development, AI, and algorithms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-4 mb-4">
+    <p>&copy; 2025 Son. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+
+    // Check saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+    }
+
+    // Toggle dark mode
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const dark = document.body.classList.contains('dark-mode');
+      icon.classList.replace(dark ? 'bi-moon-fill' : 'bi-sun-fill', dark ? 'bi-sun-fill' : 'bi-moon-fill');
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
