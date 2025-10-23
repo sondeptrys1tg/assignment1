@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css" /> 
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body shadow-sm py-3">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html" class="nav-link text-secondary fs-5 mx-2">Home</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link text-primary fs-5 fw-semibold mx-2">Blog</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link text-secondary fs-5 mx-2">About Me</a></li>
+        <li class="nav-item"><a href="resume.html" class="nav-link text-secondary fs-5 mx-2">Resume</a></li>
+        <li class="nav-item"><a href="project.html" class="nav-link text-secondary fs-5 mx-2">Project</a></li>
+        <li class="nav-item"><a href="gallary.html" class="nav-link text-secondary fs-5 mx-2">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link text-secondary fs-5 mx-2">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="btn btn-light border-0 ms-lg-3 mt-2 mt-lg-0">
+        <i id="theme-icon" class="bi bi-moon-fill fs-4"></i>
+      </button>
+    </div>
+  </div>
+  </nav>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Categories</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2">
+          <button class="btn btn-outline-primary w-100" id="btnFaqMobile">FAQs</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-success w-100" id="btnMusicMobile">Music Reviews</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+  <div class="container-box my-4">
+    <div class="row">
+      <!-- Sidebar for large screens -->
+      <div class="col-lg-3 d-none d-lg-block border-end pe-3">
+        <h5 class="fw-bold mb-3">Categories</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <button class="btn btn-outline-primary w-100" id="btnFaq">FAQs</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-success w-100" id="btnMusic">Music Reviews</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Content Area -->
+      <div class="col-lg-9 mt-3 mt-lg-0" id="content">
+
+        <!-- FAQs Section -->
+        <div id="faqContent">
+          <h2 class="text-primary">Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingLang">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLang">
+                  What is your most used programming language?
+                </button>
+              </h2>
+              <div id="collapseLang" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  I enjoy using Python for data analysis and React for web development.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSetup">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSetup">
+                  What's your setup?
+                </button>
+              </h2>
+              <div id="collapseSetup" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <ul>
+                    <li>ThinkBook 14 G4+ AMD</li>
+                    <li>External Monitor: Xiaomi 4K Monitor</li>
+                    <li>Keyboard: Lucky65v2</li>
+                    <li>Mouse: Unbranded</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingReply">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReply">
+                  Why does it take you so long to reply?
+                </button>
+              </h2>
+              <div id="collapseReply" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Because I am a horrible person at managing time and prioritizing tasks. :((  
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingMusic">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic">
+                  What inspired your music taste?
+                </button>
+              </h2>
+              <div id="collapseMusic" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Artists like Fiona Apple and Twice inspire me with storytelling and emotion. Also, I love experimental artists like Kate Bush and Björk.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingAI">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAI">
+                  Do you think AI could replace humans?
+                </button>
+              </h2>
+              <div id="collapseAI" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely not. I can never enjoy something completely if it's made by AI. I'm learning to not get too dependent on it.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Music Review 1 -->
+        <div id="musicLorde" class="d-none">
+          <h2 class="text-primary">Melodrama - Lorde</h2>
+          <p><em>Best album she ever released, very relatable for teens.</em></p>
+          <p><em>Best tracks: Green Light, Supercut, The Louvre</em></p>
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/dMK_npDG12Q" title="Melodrama - Lorde" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Music Review 2 -->
+        <div id="musicCarly" class="d-none">
+          <h2 class="text-primary">Emotion - Carly Rae Jepsen</h2>
+          <p><em>She really released a pop bible huh. 10/10. “Run Away With Me” is how you open an album.</em></p>
+          <p><em>Best tracks: All.</em></p>
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/VzALZjoIx0g" title="Emotion - Carly Rae Jepsen" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+   <footer>
+    <div class="footer mt-4 mb-4 text-center">
+      <p>&copy; 2025 Son. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const faqBtn = document.getElementById("btnFaq");
+    const musicBtn = document.getElementById("btnMusic");
+    const faqMobile = document.getElementById("btnFaqMobile");
+    const musicMobile = document.getElementById("btnMusicMobile");
+    const faqContent = document.getElementById("faqContent");
+    const musicLorde = document.getElementById("musicLorde");
+    const musicCarly = document.getElementById("musicCarly");
+    const sidebarMenu = document.getElementById("sidebarMenu");
+
+    function showFaq() {
+      faqContent.classList.remove("d-none");
+      musicLorde.classList.add("d-none");
+      musicCarly.classList.add("d-none");
+      bootstrap.Offcanvas.getInstance(sidebarMenu)?.hide();
+    }
+
+    function showMusic() {
+      faqContent.classList.add("d-none");
+      musicLorde.classList.remove("d-none");
+      musicCarly.classList.remove("d-none");
+      bootstrap.Offcanvas.getInstance(sidebarMenu)?.hide();
+    }
+
+    faqBtn?.addEventListener("click", showFaq);
+    musicBtn?.addEventListener("click", showMusic);
+    faqMobile?.addEventListener("click", showFaq);
+    musicMobile?.addEventListener("click", showMusic);
+
+    // Theme toggle logic
+    const toggle = document.getElementById("theme-toggle");
+    const icon = document.getElementById("theme-icon");
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      icon.classList.replace("bi-moon-fill", "bi-sun-fill");
+    }
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const dark = document.body.classList.contains("dark-mode");
+      icon.classList.replace(dark ? "bi-moon-fill" : "bi-sun-fill", dark ? "bi-sun-fill" : "bi-moon-fill");
+      localStorage.setItem("theme", dark ? "dark" : "light");
+    });
+  </script>
+</body>
+</html>

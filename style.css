@@ -26,48 +26,82 @@ body.dark-mode a {
   color: #82b1ff;
 }
 
-/* =======================
-   Navigation Bar
-======================= */
-.nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  background-color: #ffffff;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* ===== Navbar Styles ===== */
+.navbar {
+  background-color: #ffffff !important;
   border-radius: 15px;
   margin: 20px auto;
   max-width: 1000px;
-  transition: background-color 0.3s;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav-link {
-  text-decoration: none;
-  transition: color 0.3s;
+/* Dark Mode Navbar */
+body.dark-mode .navbar {
+  background-color: #1a1a1a !important;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .nav {
-  background-color: #000000;
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: #555 !important;
+  transition: color 0.3s ease;
 }
 
-body.dark-mode .nav-link {
-  color: #ffffff !important;
+.navbar-nav .nav-link:hover {
+  color: #0d6efd !important;
 }
 
-body.dark-mode .nav-link.text-primary {
+/* Active link */
+.navbar-nav .nav-link.text-primary {
+  color: #0d6efd !important;
+}
+
+body.dark-mode .navbar-nav .nav-link.text-primary {
+  color: #0d6efd !important;
+}
+
+
+/* Dark mode link colors */
+body.dark-mode .navbar-nav .nav-link {
+  color: #ddd !important;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
   color: #82b1ff !important;
 }
 
+/* Footer */
+.footer {
+  color: #777;
+}
+
+body.dark-mode .footer {
+  color: #ccc;
+}
+
+/* Background transition */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+
 /* =======================
-   Main Container Box (Reusable)
+   Reusable Container Box
 ======================= */
 .container-box {
   background-color: #ffffff;
   border-radius: 15px;
   padding: 40px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 50px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, color 0.3s;
@@ -76,6 +110,83 @@ body.dark-mode .nav-link.text-primary {
 body.dark-mode .container-box {
   background-color: #1f1f1f;
   color: #ffffff;
+}
+
+/* =======================
+   Resume Layout
+======================= */
+.resume-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+}
+
+/* Left Column */
+.left-column {
+  flex: 0 0 30%;
+  padding-right: 20px;
+  border-right: 2px solid rgba(0,0,0,0.1);
+}
+
+/* Right Column */
+.right-column {
+  flex: 1;
+  padding-left: 30px;
+}
+
+/* Dark Mode Separator */
+body.dark-mode .left-column {
+  border-right: 2px solid rgba(255,255,255,0.15);
+}
+
+/* Header Section */
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+.header h3 {
+  font-weight: 500;
+  color: #555;
+}
+.profile-img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Section Titles */
+.section-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #0d6efd;
+  border-left: 4px solid #0d6efd;
+  padding-left: 8px;
+}
+body.dark-mode .section-title {
+  color: #82b1ff;
+  border-left-color: #82b1ff;
+}
+
+/* Resume Text */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.work-item h5 {
+  margin-bottom: 3px;
+}
+.work-item small {
+  color: #777;
+  display: block;
+  margin-bottom: 5px;
+}
+body.dark-mode .work-item small {
+  color: #aaa;
 }
 
 /* =======================
@@ -88,41 +199,31 @@ body.dark-mode .container-box {
   margin-bottom: 20px;
   transition: color 0.3s;
 }
-
 body.dark-mode #contact h2 {
   color: #ffffff;
 }
-
 #contact p {
   font-size: 1.1rem;
   color: #444;
   margin-bottom: 25px;
   transition: color 0.3s;
 }
-
 body.dark-mode #contact p {
   color: #cccccc;
 }
-
-/* Social Media Icon Links */
 #contact a {
   transition: transform 0.2s ease, color 0.3s ease;
 }
-
 #contact a:hover {
   transform: scale(1.2);
   filter: brightness(1.2);
 }
-
-/* Email (red), Facebook (blue), GitHub (dark) colors in dark mode */
 body.dark-mode #contact a.text-danger {
   color: #ff6b6b !important;
 }
-
 body.dark-mode #contact a.text-primary {
   color: #82b1ff !important;
 }
-
 body.dark-mode #contact a.text-dark {
   color: #e0e0e0 !important;
 }
@@ -136,37 +237,8 @@ body.dark-mode #contact a.text-dark {
   color: #666;
   transition: color 0.3s;
 }
-
 body.dark-mode .footer {
   color: #cccccc;
-}
-
-/* =======================
-   Responsive Design
-======================= */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .container-box {
-    padding: 25px;
-    margin: 30px 15px;
-  }
-
-  #contact h2 {
-    font-size: 1.6rem;
-  }
-
-  #contact p {
-    font-size: 1rem;
-  }
-
-  #contact .d-flex {
-    flex-wrap: wrap;
-    gap: 30px !important;
-  }
 }
 
 /* =======================
@@ -185,7 +257,6 @@ body.dark-mode .footer {
   gap: 40px;
   transition: background-color 0.3s, color 0.3s;
 }
-
 .profile-img {
   width: 200px;
   height: 200px;
@@ -193,20 +264,28 @@ body.dark-mode .footer {
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .about-header h1 {
   margin-bottom: 20px;
   font-size: 3rem;
   color: rgb(22, 157, 230);
 }
-
 .about-header p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
 }
+body.dark-mode .about-header {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+body.dark-mode .about-header p {
+  color: #e0e0e0;
+}
 
-/* ====== More Info Section ====== */
+body.dark-mode .about-header h1 {
+  color: #82b1ff;
+}
 .more-info {
   background-color: white;
   border-radius: 15px;
@@ -216,9 +295,54 @@ body.dark-mode .footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, color 0.3s;
 }
-
 .more-info p, .more-info li {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
+}
+body.dark-mode .more-info {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .more-info p,
+body.dark-mode .more-info li {
+  color: #e0e0e0;
+}
+
+
+/* =======================
+   Responsive Design
+======================= */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .container-box {
+    padding: 25px;
+    margin: 30px 15px;
+  }
+
+  .resume-container {
+    flex-direction: column;
+  }
+
+  .left-column {
+    border-right: none;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding-right: 0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .right-column {
+    padding-left: 0;
+  }
+
+  body.dark-mode .left-column {
+    border-bottom: 2px solid rgba(255,255,255,0.15);
+  }
 }
