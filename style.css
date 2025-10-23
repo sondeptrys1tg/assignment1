@@ -1,0 +1,224 @@
+/* =======================
+   Global Styles
+======================= */
+body {
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Links */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  text-decoration: underline;
+}
+body.dark-mode a {
+  color: #82b1ff;
+}
+
+/* =======================
+   Navigation Bar
+======================= */
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 1000px;
+  transition: background-color 0.3s;
+}
+
+.nav-link {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+body.dark-mode .nav {
+  background-color: #000000;
+}
+
+body.dark-mode .nav-link {
+  color: #ffffff !important;
+}
+
+body.dark-mode .nav-link.text-primary {
+  color: #82b1ff !important;
+}
+
+/* =======================
+   Main Container Box (Reusable)
+======================= */
+.container-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .container-box {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+/* =======================
+   Contact Page
+======================= */
+#contact h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+body.dark-mode #contact h2 {
+  color: #ffffff;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 25px;
+  transition: color 0.3s;
+}
+
+body.dark-mode #contact p {
+  color: #cccccc;
+}
+
+/* Social Media Icon Links */
+#contact a {
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+#contact a:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Email (red), Facebook (blue), GitHub (dark) colors in dark mode */
+body.dark-mode #contact a.text-danger {
+  color: #ff6b6b !important;
+}
+
+body.dark-mode #contact a.text-primary {
+  color: #82b1ff !important;
+}
+
+body.dark-mode #contact a.text-dark {
+  color: #e0e0e0 !important;
+}
+
+/* =======================
+   Footer
+======================= */
+.footer {
+  text-align: center;
+  justify-content: center;
+  color: #666;
+  transition: color 0.3s;
+}
+
+body.dark-mode .footer {
+  color: #cccccc;
+}
+
+/* =======================
+   Responsive Design
+======================= */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .container-box {
+    padding: 25px;
+    margin: 30px 15px;
+  }
+
+  #contact h2 {
+    font-size: 1.6rem;
+  }
+
+  #contact p {
+    font-size: 1rem;
+  }
+
+  #contact .d-flex {
+    flex-wrap: wrap;
+    gap: 30px !important;
+  }
+}
+
+/* =======================
+   About Page
+======================= */
+.about-header {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-header h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: rgb(22, 157, 230);
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ====== More Info Section ====== */
+.more-info {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.more-info p, .more-info li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
