@@ -26,7 +26,9 @@ body.dark-mode a {
   color: #82b1ff;
 }
 
-/* ===== Navbar Styles ===== */
+/* ==============
+ Navbar Styles 
+ ================ */
 .navbar {
   background-color: #ffffff !important;
   border-radius: 15px;
