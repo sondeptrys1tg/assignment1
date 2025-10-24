@@ -158,12 +158,12 @@
         </div>
 
         <!-- Music Review 2 -->
-        <div id="musicCarly" class="d-none">
-          <h2 class="text-primary">Emotion - Carly Rae Jepsen</h2>
-          <p><em>She really released a pop bible huh. 10/10. “Run Away With Me” is how you open an album.</em></p>
+        <div id="musicFiona" class="d-none">
+          <h2 class="text-primary">Fiona Apple - When the pawn</h2>
+          <p><em>The longest title of an album. Rage, love, grief, this was everything</em></p>
           <p><em>Best tracks: All.</em></p>
           <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/watch?v=TeccAtqd5K8" title="Emotion - Carly Rae Jepsen" allowfullscreen></iframe>
+            <iframe src="https://youtu.be/BK30r_SIZ-g?si=NMBvqt-Y-i7J6x2w" title="Fiona Apple - When the pawn.." allowfullscreen></iframe>
           </div>
         </div>
 
@@ -186,20 +186,20 @@
     const musicMobile = document.getElementById("btnMusicMobile");
     const faqContent = document.getElementById("faqContent");
     const musicLorde = document.getElementById("musicLorde");
-    const musicCarly = document.getElementById("musicCarly");
+    const musicFiona = document.getElementById("musicFiona");
     const sidebarMenu = document.getElementById("sidebarMenu");
 
     function showFaq() {
       faqContent.classList.remove("d-none");
       musicLorde.classList.add("d-none");
-      musicCarly.classList.add("d-none");
+      musicFiona.classList.add("d-none");
       bootstrap.Offcanvas.getInstance(sidebarMenu)?.hide();
     }
 
     function showMusic() {
       faqContent.classList.add("d-none");
       musicLorde.classList.remove("d-none");
-      musicCarly.classList.remove("d-none");
+      musicFiona.classList.remove("d-none");
       bootstrap.Offcanvas.getInstance(sidebarMenu)?.hide();
     }
 
